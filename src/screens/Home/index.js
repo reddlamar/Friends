@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 
-import AddFriend from '../../components/AddFriend';
+import AddFriendButton from '../../components/AddFriendButton';
 import Friends from '../../components/Friends';
 import AddFriendModal from '../../components/Modal';
 
@@ -31,7 +31,7 @@ const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <StatusBar />
-      <AddFriend setModalVisible={setModalVisible} />
+      <AddFriendButton setModalVisible={setModalVisible} />
       <Friends friends={friendList} remove={remove} navigation={navigation} />
       <AddFriendModal
         add={add}

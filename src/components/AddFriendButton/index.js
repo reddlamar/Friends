@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from 'react-native';
 import {styles} from './styles';
 
-const AddFriend = ({setModalVisible}) => {
+const AddFriendButton = ({setModalVisible}) => {
   return (
     <Button
       style={styles.button}
@@ -12,4 +12,4 @@ const AddFriend = ({setModalVisible}) => {
   );
 };
 
-export default AddFriend;
+export default AddFriendButton;
