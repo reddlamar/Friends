@@ -14,18 +14,23 @@ const HomeScreen = ({navigation}) => {
   console.log('Init Friends', friendList);
 
   const add = newFriend => {
-    newFriend.id = friendList.length + 1;
-    console.log(newFriend);
+    newFriend.id = generateID();
     setFriendList(() => [newFriend, ...friendList]);
+  };
+
+  const generateID = () => {
+    const newId = Math.random() * friendList.length + 1;
+    if (friendList.some(f => f.id === newId)) {
+      generateID();
+    }
+    return newId;
   };
 
   const remove = (e, id) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log('ID', id);
-    const updatedFriendList = friendList.filter(f => f.id !== id);
-    console.log('Updated Friends', updatedFriendList);
-    setFriendList(updatedFriendList);
+    const filteredFriendList = friendList.filter(f => f.id !== id);
+    setFriendList(filteredFriendList);
   };
 
   return (
