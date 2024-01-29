@@ -54,9 +54,11 @@ const AddFriendModal = ({add, modalVisible, setModalVisible}) => {
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => {
-                add({firstName, lastName, email, phone});
-                clearTextInputs();
-                setModalVisible(!modalVisible);
+                if (firstName && lastName && email && phone) {
+                  add({firstName, lastName, email, phone});
+                  clearTextInputs();
+                  setModalVisible(!modalVisible);
+                }
               }}>
               <Text style={styles.textStyle}>Add</Text>
             </Pressable>

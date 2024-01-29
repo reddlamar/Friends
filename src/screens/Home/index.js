@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Alert, SafeAreaView, StatusBar, Text, View} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 
 import AddFriend from '../../components/AddFriend';
 import Friends from '../../components/Friends';

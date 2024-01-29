@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button} from 'react-native';
+import {styles} from './styles';
+
 const AddFriend = ({setModalVisible}) => {
   return (
     <Button
-      style={{borderWidth: 3, bordColor: 'red'}}
-      title="Add New Friend"
+      style={styles.button}
+      title="Add A New Friend"
       onPress={() => setModalVisible(true)}
     />
   );
