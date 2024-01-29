@@ -11,7 +11,6 @@ import friends from '../../data/friends.json';
 const HomeScreen = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [friendList, setFriendList] = useState(friends);
-  console.log('Init Friends', friendList);
 
   const add = newFriend => {
     newFriend.id = generateID();
